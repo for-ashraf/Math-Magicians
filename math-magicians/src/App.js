@@ -11,7 +11,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="#"
+          href="https://github.com/microverseinc/curriculum-react-redux/blob/main/math-magicians/sneak_peek.md"
           target="_blank"
           rel="noopener noreferrer"
         >
