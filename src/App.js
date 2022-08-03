@@ -1,18 +1,10 @@
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import Calculator from './components/Calculator';
-import Navigation from './components/Navigation';
-
+// eslint-disable-next-line react/prefer-stateless-function
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <header><Navigation /></header>
-        <main className="main-container">
-          <Calculator />
-        </main>
-        <footer className="footer-container" />
-      </div>
+      <Calculator />
     );
   }
 }

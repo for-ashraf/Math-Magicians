@@ -1,52 +1,32 @@
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable react/destructuring-assignment */
-import React from 'react';
-
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 0,
-      next: null,
-    };
-  }
-
+import React, { Component } from 'react';
+// eslint-disable-next-line react/prefer-stateless-function
+class Calculator extends Component {
   render() {
-    const { total, next } = this.state;
     return (
-      <section className="calculator">
-        <div className="display">{next || total}</div>
-        {/* display calculation */}
-
-        <button onClick={this.handleClick} className="btns hover" type="button">AC</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">+/-</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">%</button>
-        <button onClick={this.handleClick} className="operators hover" type="button">÷</button>
-        {/* first row */}
-
-        <button onClick={this.handleClick} className="btns hover" type="button">7</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">8</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">9</button>
-        <button onClick={this.handleClick} className="operators hover" type="button">x</button>
-        {/* second row */}
-
-        <button onClick={this.handleClick} className="btns hover" type="button">4</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">5</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">6</button>
-        <button onClick={this.handleClick} className="operators hover" type="button">-</button>
-        {/* third row */}
-
-        <button onClick={this.handleClick} className="btns hover" type="button">1</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">2</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">3</button>
-        <button onClick={this.handleClick} className="operators hover" type="button">+</button>
-        {/* fourth row */}
-
-        <button onClick={this.handleClick} className="zero hover" type="button">0</button>
-        <button onClick={this.handleClick} className="btns hover" type="button">.</button>
-        <button onClick={this.handleClick} className="operators hover" type="button">=</button>
-        {/* fifth row */}
-      </section>
+      <div className="container">
+        <div className="wrapper">
+          <div className="screen"> 0</div>
+          <div className="btn light-gray">AC</div>
+          <div className="btn light-gray">+/-</div>
+          <div className="btn light-gray">%</div>
+          <div className="btn orange">÷</div>
+          <div className="btn">7</div>
+          <div className="btn">8</div>
+          <div className="btn">9</div>
+          <div className="btn orange">x</div>
+          <div className="btn">4</div>
+          <div className="btn">5</div>
+          <div className="btn">6</div>
+          <div className="btn orange">-</div>
+          <div className="btn">1</div>
+          <div className="btn">2</div>
+          <div className="btn">3</div>
+          <div className="btn orange">+</div>
+          <div className="btn zero">0</div>
+          <div className="btn">.</div>
+          <div className="btn orange">=</div>
+        </div>
+      </div>
     );
   }
 }
