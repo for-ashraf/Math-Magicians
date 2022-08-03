@@ -1,7 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -9,13 +8,7 @@ class Calculator extends React.Component {
     this.state = {
       total: 0,
       next: null,
-      operation: null,
     };
-  }
-
-  handleClick = (event) => {
-    const res = calculate(this.state, event.target.textContent);
-    this.setState(res);
   }
 
   render() {
