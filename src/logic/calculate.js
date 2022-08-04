@@ -12,7 +12,7 @@ export default function calculate(obj, buttonName) {
   function isDigit(value) {
     return !!value.match(/[0-9]+/);
   }
-  
+
   if (isDigit(buttonName)) {
     if (buttonName === '0' && obj.next === '0') {
       return {};

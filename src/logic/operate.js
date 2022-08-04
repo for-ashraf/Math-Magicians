@@ -3,7 +3,7 @@ import Big from 'big.js';
 export default function operate(numberOne, numberTwo, operator) {
   const one = Big(numberOne);
   const two = Big(numberTwo);
- 
+
   if (operator === '-') {
     return one.minus(two).toString();
   }
