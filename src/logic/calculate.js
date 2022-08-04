@@ -9,11 +9,11 @@ export default function calculate(obj, buttonName) {
     };
   }
 
-  function isNumber(number) {
-    return !!number.match(/[0-9]+/);
+  function isDigit(value) {
+    return !!value.match(/[0-9]+/);
   }
-
-  if (isNumber(buttonName)) {
+  
+  if (isDigit(buttonName)) {
     if (buttonName === '0' && obj.next === '0') {
       return {};
     }
@@ -74,11 +74,9 @@ export default function calculate(obj, buttonName) {
     }
     return {};
   }
-
   if (!obj.next && obj.total && !obj.operation) {
     return { ...obj, operation: buttonName };
   }
-
   if (obj.operation) {
     if (obj.total && !obj.next) {
       return { ...obj, operation: buttonName };
@@ -94,11 +92,9 @@ export default function calculate(obj, buttonName) {
       operation: buttonName,
     };
   }
-
   if (!obj.next) {
     return { operation: buttonName };
   }
-
   return {
     total: obj.next,
     next: null,
